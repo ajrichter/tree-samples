@@ -39,9 +39,9 @@ A collection of utilities and documentation for analyzing and migrating REST API
 
 ### Running Scripts
 
-#### Simple URL Search
+#### Simple Service Endpoint Search
 ```bash
-# Edit urls_to_migrate list in rg_script.py first, then run:
+# Edit service_endpoints dict in rg_script.py first (format: {"service_name": "/endpoint/path"}), then run:
 uv run python ripgrep_ideas/rg_script.py
 ```
 
@@ -122,7 +122,7 @@ for file, matches in results.items():
 ## 🛠️ Customization
 
 Edit the scripts to customize for your needs:
-- **URLs to search**: Modify `urls_to_migrate` in `rg_script.py`
+- **Service endpoints**: Modify `service_endpoints` dict in `rg_script.py` (format: `{"service_name": "/endpoint/path"}`)
 - **Search patterns**: Add custom regex patterns in `ripgrep.py`
 - **File types**: Adjust `-g` glob patterns for different languages
 - **Context lines**: Change `-A`/`-B` parameters for more/less context
